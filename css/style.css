@@ -1,0 +1,186 @@
+@font-face
+{
+	font-family: Spartan;
+	src: url(fonts/Spartan/Spartan-VariableFont_wght.ttf);
+}
+
+@font-face
+{
+	font-family: Vampiro;
+	src: url(fonts/Vampiro_One/VampiroOne-Regular.ttf);
+}
+
+body
+{
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(180deg, #253242 3.23%, #A85D75 42.81%, #C3C5BB 72.5%);
+	width: 100vw;
+	height: 100vh;
+}
+
+@keyframes vague
+{
+	from {left:  -100vw;}
+	to {left: 0;}
+}
+
+@keyframes flotter { 
+    0% {top : 15% ;transform: rotate(-2deg);} 
+    50%  {top : 20%;transform: rotate(2deg); } 
+    100%   {top : 15%; transform: rotate(-2deg); }     
+} 
+
+
+#vagues
+{
+	position: absolute;
+	bottom: 0;
+	height: 70vh;
+	width: 100%;
+	overflow-x:hidden;
+}
+
+
+#vagues img
+{
+	position: absolute;
+	height: 50vh;
+	filter: drop-shadow( 0px -18px 24px rgba(196, 196, 196, 1));
+	animation-name: vague;
+	width: 200vw;
+	bottom: 0;
+	animation-timing-function:linear;
+	animation-iteration-count: infinite;
+}
+
+
+#vagues img:first-of-type
+{
+	animation-duration: 55s;
+	animation-direction: reverse;
+}
+
+#vagues img:nth-of-type(2)
+{
+	position: absolute;
+	top: 25%;
+	left: 40%;
+	width: 20vw;
+	height: auto;
+	filter: none;
+	animation-name: flotter;
+	animation-timing-function:ease-in-out;
+	animation-duration: 4s;
+	transform-origin: 50% 50%;
+}
+
+#vagues img:last-of-type
+{
+	animation-duration: 65s;
+	animation-direction: normal;
+}
+
+#logo
+{
+	display: flex;
+	align-items: center;
+	height: 60%;
+	margin-left: 47px;
+}
+
+#cours
+{
+	position: absolute;
+	bottom: 2vh;
+	right: 2vw;
+	display: flex;
+	flex-direction: column;
+}
+
+#cours span:first-child
+{
+	font-family: Vampiro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	color: #2C3445;
+	mix-blend-mode: normal;
+	line-height: 95%;
+	margin-left: 2px
+}
+
+#cours span:last-child
+{
+	font-family: Spartan;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15.5px;
+	color: #2C3445;
+	mix-blend-mode: normal;
+}
+
+
+header a
+{
+	position: relative;
+	font-family: Spartan;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18.3px;
+	color: #C3C5BB;
+	mix-blend-mode: normal;
+	display: flex;
+	text-decoration: none;
+	align-items: center;
+	justify-content: space-between;
+	transition: all 0.4s;
+}
+
+header a:hover
+{
+	color:  #253242;
+}
+
+header a:hover span:first-of-type
+{
+	width: 110%;
+}
+
+header a span:first-of-type
+{
+	position: absolute;
+	top: -20%;
+	left: -5%;
+	width: 0%;
+	height: 140%;
+	background-color: white;
+	transition: all 0.4s;
+}
+
+header a span:last-of-type
+{
+	z-index: 9999;
+}
+
+header
+{
+	position: absolute;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	width: 100vw;
+	height: 10vh;
+	margin: 0;
+}
+
+#liens
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 45%;
+	position: relative;
+	right: 4vw;
+}
+
