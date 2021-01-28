@@ -1,0 +1,165 @@
+
+div
+{
+	border: 4px solid red;
+	margin: 5px;
+}
+
+@font-face
+{
+	font-family: Spartan;
+	src: url(fonts/Spartan/Spartan-VariableFont_wght.ttf);
+}
+
+@font-face
+{
+	font-family: Vampiro;
+	src: url(fonts/Vampiro_One/VampiroOne-Regular.ttf);
+}
+
+body
+{
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(180deg, #253242 3.23%, #A85D75 42.81%, #C3C5BB 72.5%);
+	width: 100vw;
+	height: 100vh;
+}
+
+@keyframes vague
+{
+	from {left:  -50%;}
+	to {left: 0%;}
+} 
+
+
+#vagues
+{
+	/* background-color: black; */
+	position: absolute;
+	bottom: 0;	
+	height: 50vh;
+	width: 100%;
+	overflow-x:hidden;
+}
+
+.vague
+{
+	/* height: 100%; */
+	filter: invert();
+}
+
+.vague:first-child
+{
+	display: flex;
+	flex-direction: row;
+	width: 200vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* animation-name: vague;
+	animation-duration: 10s;
+	animation-direction: reverse;
+	animation-iteration-count: infinite;
+	animation-timing-function:linear; */
+}
+
+/* .vague:last-child
+{
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	animation-name: vague;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function:linear;
+} */
+
+h1
+{
+font-family: Vampiro One;
+font-style: normal;
+font-weight: normal;
+font-size: 35px;
+line-height: 44px;
+
+color: #C3C5BB;
+
+mix-blend-mode: normal;
+}
+
+h2
+{
+font-family: Spartan;
+font-style: normal;
+font-weight: normal;
+font-size: 23.3px;
+line-height: 26px;
+
+color: #C3C5BB;
+}
+
+h5
+{
+
+font-family: Spartan;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 22px;
+
+color: #2C3445;
+}
+
+a
+{
+
+font-family: Spartan;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 28px;
+
+color: #C3C5BB;
+
+mix-blend-mode: normal;
+
+display: flex; 
+justify-content: flex-end;
+}
+
+header
+{
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	margin: 0;
+}
+
+#logo_block
+{
+	display: flex;
+	align-items: center;
+}
+
+#logo
+{
+	width: 85px;
+	height: 85px;
+}
+
+#liens a
+{
+	display: block;
+}
+
+#liens
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 55%;
+}
